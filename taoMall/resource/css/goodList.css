@@ -1,0 +1,238 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 701002 */
+  src: url('https://at.alicdn.com/t/font_701002_uuejmwcf2goxn7b9.eot');
+  src: url('https://at.alicdn.com/t/font_701002_uuejmwcf2goxn7b9.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_701002_uuejmwcf2goxn7b9.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_701002_uuejmwcf2goxn7b9.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_701002_uuejmwcf2goxn7b9.svg#iconfont') format('svg');
+}
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 微软雅黑;
+}
+a{
+  text-decoration: none;
+}
+.header{
+  width: 100%;
+  height: 140px;
+}
+.header_main{
+  width: 1180px;
+  height: 100%;
+  background-color: white;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.header_logo{
+  float: left;
+  padding-top: 32.5px;
+}
+.header_login{
+  width: 120px;
+  height: 140px;
+  float: right;
+  line-height: 140px;
+}
+.header_login a{
+  font-size: 16px;
+  float: right;
+  color: #605f5f;
+  margin-left: 10px;
+}
+.header_login a:hover{
+  color: #d1434a;
+}
+.shoppingcar{
+  font-family: iconfont;
+}
+.bread{
+  width: 100%;
+  height: 90px;
+  background-color: #f0f0f0;
+}
+.bread_main{
+  width: 1220px;
+  height: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.bread_nav{
+  width: auto;
+  height: 90px;
+  line-height: 90px;
+  color: #a1a1a1;
+  font-size: 14px;
+}
+.bread_nav a{
+  color: #a1a1a1;
+}
+.bread_nav a:hover{
+  color: #d1434a;
+}
+.bread_nav .bread_current{
+  color: #d1434a;
+}
+.main{
+  width: 100%;
+  height: auto;
+  background-color: #F5F7FC;
+}
+.main_main{
+  width: 1220px;
+  height: auto;
+  margin: 0 auto;
+  padding: 120px 20px 100px 20px;
+}
+.main_sort{
+  width: 1220px;
+  height: 110px;
+  line-height: 110px;
+  background-color: white;
+}
+.sort_content{
+  padding-right: 40px;
+  float: right;
+}
+.sort_content span,.sort_content a{
+  float: right;
+}
+.sort_content span{
+  color: #605f5f;
+  cursor: pointer;
+}
+.sort_content span:hover{
+  color: #ee7a23;
+}
+.sort_content a{
+  color: #ee7a23;
+  margin-left: 20px;
+  margin-right: 40px;
+}
+.main_sort .sort_jiantou{
+  font-family: iconfont;
+  color: black;
+}
+.main_content{
+  width: 100%;
+  height: auto;
+  padding-top: 60px;
+  display: flex;
+}
+.content_left{
+
+  width: 215px;
+  padding-left: 40px;
+}
+.content_right{
+  width: 1005px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.content_left .content_title{
+  height: 40px;
+  line-height: 40px;
+  padding-bottom: 60px;
+  font-weight: bold;
+  color: #605f5f;
+}
+.filter{
+  padding: 0;
+}
+.filter li{
+  list-style: none;
+  height: 52px;
+  line-height: 52px;
+  padding: 0 ;
+  margin-bottom: 40px;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+.filter li a{
+  color: #605f5f;
+}
+.filter li:hover{
+  border-left: 3px solid #ee7a23;
+  padding-left: 20px;
+}
+.content_item{
+  width: 23.80952%;
+  background-color: white;
+  padding: 20px;
+  margin: 0 1.5873% 1.5873% 0;
+  box-sizing: border-box;
+  border: 2px solid #e9e9e9;
+  transition: all 1s;
+}
+.content_item1{
+  margin-right: 0;
+}
+.item_img{
+  width: 100%;
+  padding-bottom: 40px;
+}
+.item_name{
+  color: #605f5f;
+  font-weight: bold;
+}
+.item_price{
+  margin-top: 40px;
+  font-size: 18px;
+  color: #d1434a;
+}
+.item_buy{
+  width: 100%;
+  height: 40px;
+  border: 2px solid #d1434a;
+  text-align: center;
+  line-height: 40px;
+  color: #d1434a;
+}
+.content_item:hover{
+  transform: translateY(-4px);
+  cursor: pointer;
+  box-shadow: 2px 2px 5px #ee7a23;
+}
+.footer{
+  width: 100%;
+  height: 200px;
+  background-color: #F5F7FC;
+}
+.footer_main{
+  width: 1188px;
+  height: 100%;
+  padding-left: 72px;
+  margin: 0 auto;
+}
+.footer_box{
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid #e9e9e9;
+  color: #a1a1a1;
+}
+.footer_left{
+  height: 100%;
+  line-height: 200px;
+  margin-left: 40px;
+  float: left;
+}
+.footer_select{
+  border-radius: 5px;
+}
+.footer_right{
+  height: 100%;
+  line-height: 200px;
+  float: right;
+}
+.footer_right a{
+  float: right;
+  margin-right: 20px;
+  color: #a1a1a1;
+}
+.footer_right p{
+  float: right;
+  margin-right: 20px;
+  line-height: 168px;
+}
