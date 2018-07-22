@@ -1,0 +1,150 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 701002 */
+  src: url('https://at.alicdn.com/t/font_701002_ar7grv33qoa.eot');
+  src: url('https://at.alicdn.com/t/font_701002_ar7grv33qoa.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_701002_ar7grv33qoa.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_701002_ar7grv33qoa.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_701002_ar7grv33qoa.svg#iconfont') format('svg');
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+}
+.ad_main{
+  width: 100%;
+  height: auto;
+  background-color: #F5F7FC;
+}
+.ad_main_content{
+  width: 1220px;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.process{
+  display: flex;
+  width: 100%;
+}
+.process li{
+  width: 305px;
+  padding: 40px 0;
+  text-align: center;
+  color: #CAC8CE;
+}
+.ad_line{
+  position: relative;
+  width: 305px;
+  height: 2px;
+  margin-top: 20px;
+  background-color: #CAC8CE;
+}
+.ad_cirle{
+  position: absolute;
+  left: 147px;
+  top: -6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: #CAC8CE;
+}
+.ad_line_active,.ad_cirle_active{
+  background-color: #d1434a;
+}
+.process .ad_pro_title_active{
+  color: #d1434a;
+}
+.process_active li{
+  color: #d1434a;
+}
+.ad_content{
+  width: 1260px;
+  height: auto;
+}
+.ad_title{
+
+}
+.ad_items{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+.ad_items li{
+  width: 290px;
+  height: 180px;
+  padding: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  background-color: white;
+  border: 2px solid #EFEDF4;
+  cursor: pointer;
+}
+.ad_items .li_active,.ad_items li:hover{
+  border: 2px solid #ee7a23;
+}
+.ad_items div{
+
+}
+.ad_items div span{
+  font-family: 'iconfont';
+  cursor: pointer;
+  float: right;
+}
+.ad_address,.ad_tel,.ad_items div{
+  margin-top: 15px;
+}
+.ad_items div span:hover,.ad_default{
+  color: #ee7a23;
+}
+.ad_default{
+  float: left;
+}
+.set_default{
+  display: none;
+}
+.ad_items li:hover .set_default{
+  display: block;
+}
+.set_default:hover{
+  color: #d1434a;
+}
+.ad_items .ad_addAdr{
+  text-align: center;
+}
+.ad_items .ad_addAdr span{
+  font-size: 60px;
+  cursor: pointer;
+}
+.ad_items .ad_addAdr span:hover{
+  color: #ee7a23;
+}
+.ad_more{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  color: #ee7a23;
+  cursor: pointer;
+}
+.ad_more span{
+  font-family: iconfont;
+  display: block;
+  transition: all .5s;
+}
+.ad_more_expand span{
+  transform: rotate(180deg);
+}
+.ad_next{
+  float: right;
+  width: 100px;
+  height: 40px;
+  background-color: #d1434a;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+.ad_next_a{
+  color: white;
+}

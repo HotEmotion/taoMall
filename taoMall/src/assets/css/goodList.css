@@ -19,6 +19,7 @@ a{
   height: 140px;
 }
 .header_main{
+  position: relative;
   width: 1180px;
   height: 100%;
   background-color: white;
@@ -30,22 +31,44 @@ a{
   padding-top: 32.5px;
 }
 .header_login{
-  width: 120px;
-  height: 140px;
   float: right;
   line-height: 140px;
+}
+.header_login span{
 }
 .header_login a{
   font-size: 16px;
   float: right;
   color: #605f5f;
   margin-left: 10px;
+  cursor: pointer;
 }
-.header_login a:hover{
+.header_login a:hover {
   color: #d1434a;
 }
-.shoppingcar{
+.carCount{
+  position: absolute;
+  top: 38px;
+  right: 22px;
+  width: 30px;
+  height: 30px;
+  background-color: #d1434a;
+  border-radius: 30px;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+}
+.header_login .carCount1{
+  color: #F5F7FC;
+  margin-left: 0;
+  float: none;
+}
+.header_login .carCount1:hover{
+  color: #F5F7FC;
+}
+.header_login .shoppingcar{
   font-family: iconfont;
+  font-size: 24px;
 }
 .bread{
   width: 100%;
@@ -84,6 +107,7 @@ a{
   height: auto;
   margin: 0 auto;
   padding: 120px 20px 100px 20px;
+  border-bottom: 2px solid #e9e9e9;
 }
 .main_sort{
   width: 1220px;
@@ -110,9 +134,16 @@ a{
   margin-left: 20px;
   margin-right: 40px;
 }
-.main_sort .sort_jiantou{
+.main_sort {
   font-family: iconfont;
   color: black;
+}
+.sort_jiantou{
+  display: block;
+  transition: all .3s;
+}
+.sort_jiantou_turn{
+  transform: rotate(180deg);
 }
 .main_content{
   width: 100%;
@@ -191,6 +222,10 @@ a{
   line-height: 40px;
   color: #d1434a;
 }
+.item_buy:hover{
+  background-color: rgba(209,67, 74,.6);
+  color: white;
+}
 .content_item:hover{
   transform: translateY(-4px);
   cursor: pointer;
@@ -210,7 +245,6 @@ a{
 .footer_box{
   width: 100%;
   height: 100%;
-  border-top: 2px solid #e9e9e9;
   color: #a1a1a1;
 }
 .footer_left{

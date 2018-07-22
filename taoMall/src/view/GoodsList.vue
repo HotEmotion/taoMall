@@ -5,15 +5,14 @@
       <nav-header></nav-header>
       <!--面包屑部分-->
       <nav-bread>
-        <a href="">商品</a>
+        <a href="javascript:;">商品</a>
       </nav-bread>
       <!--主体部分-->
       <main class="main">
         <section class="main_main">
           <div class="main_sort">
             <div class="sort_content">
-              <span class="sort_jiantou" v-show="orderFlag">&#xe765;</span>
-              <span class="sort_jiantou" v-show="!orderFlag">&#xe660;;</span>
+              <span class="sort_jiantou" :class="{sort_jiantou_turn:!orderFlag}">&#xe765;</span>
               <span v-on:click="sortBy()">价格</span>
               <a href="">默认</a>
               <span>排序：</span>
@@ -31,8 +30,8 @@
               <div class="content_item" v-for="item in goodsList">
                 <a href=""><img v-lazy="'/static/'+item.productImg" alt="" class="item_img"></a>
                 <span class="item_name">{{item.productName}}</span>
-                <p class="item_price">{{item.productPrice}}</p>
-                <div class="item_buy">加入购物车</div>
+                <p class="item_price">{{item.productPrice | currency('￥')}}</p>
+                <div class="item_buy" @click="addToCar(item.productId)">加入购物车</div>
               </div>
 
             </div>
@@ -45,15 +44,32 @@
       </main>
       <!--底部-->
       <nav-footer></nav-footer>
+      <modal v-show="modalShow" v-on:close="closeModal">
+          <p slot="message" style="margin-left: 87px">请先登录，否则无法加入购物车</p>
+          <button slot="btnGroup" class="md_btn" style="margin-left: 90px" @click="modalShow=false">关闭</button>
+      </modal>
+      <modal v-show="modalCar" v-on:close="closeModal">
+        <div slot="message" class="confirm_tip">
+          <span>&#xe654;</span>
+          <p>加入购物车成功</p>
+        </div>
+
+        <div slot="btnGroup">
+          <button class="md_btn" @click="modalCar=false">继续购物</button>
+          <router-link  href="javascript:;" to="/car"><button class="md_btn mg_r">查看购物车</button></router-link>
+        </div>
+      </modal>
     </div>
 </template>
 
 <script>
     // 导入组件
     import './../assets/css/goodList.css'
+    import store from './../Vuex/store'
     import NavHeader from '@/components/NavHeader.vue'
     import NavFooter from '@/components/NavFooter.vue'
     import NavBread from '@/components/NavBread.vue'
+    import Modal from '@/components/Modal.vue'
     import axios from 'axios'
     export default {
         data(){
@@ -82,13 +98,16 @@
             pageSize:8,
             orderFlag:true,
             busy:true,
-            priceLevel:'all'
+            priceLevel:'all',
+            modalCar:false,
+            modalShow:false,
           }
         },
         components: {
           NavHeader,
           NavFooter,
           NavBread,
+          Modal,
         },
 
         mounted:function(){
@@ -103,7 +122,7 @@
               orderFlag:this.orderFlag,
               priceLevel:this.priceLevel,
             };
-            axios.get("/goods",{
+            axios.get("/goods/list",{
               params:param
             }).then((res)=>{
                 if(flag){
@@ -135,6 +154,22 @@
             this.priceLevel=index;
             this.page=0;
             this.getGoodsList(false);
+          },
+          addToCar(productId){
+            axios.post("/goods/addCar",{
+              productId:productId
+            }).then((res)=>{
+              if(res.data.status=='0'){
+                this.modalCar=true;
+                store.commit("updateCartCount1",1);
+              }else {
+                this.modalShow=true
+              }
+            })
+          },
+          closeModal(){
+            this.modalShow=false;
+            this.modalCar=false;
           }
 
         }

@@ -1,0 +1,107 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 701002 */
+  src: url('https://at.alicdn.com/t/font_701002_bfrw46jeyhc.eot');
+  src: url('https://at.alicdn.com/t/font_701002_bfrw46jeyhc.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_701002_bfrw46jeyhc.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_701002_bfrw46jeyhc.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_701002_bfrw46jeyhc.svg#iconfont') format('svg');
+}
+.modal{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 40px;
+  width: 520px;
+  height: 330px;
+  background-color: white;
+  z-index: 999;
+  transition: all 2s ;
+}
+.mask{
+  position: fixed;
+  top: 0;
+  right:0;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:100%;
+  opacity: 0.4;
+  background:rgb(0, 0, 0);
+  z-index: 50;
+  transition: all 2s ;
+}
+.md_close{
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  font-size: 30px;
+  color: grey;
+}
+.md_title{
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+}
+.md_title h2{
+  margin: 0;
+}
+.md_content{
+  width: 100%;
+
+}
+.confirm_tip1{
+  display: flex;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+}
+.confirm_tip1 span{
+
+}
+.confirm_tip1 .tip_icon{
+  font-family: iconfont;
+  color: #d1434a;
+  font-size: 28px;
+}
+.md_content ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.md_content ul li{
+  display: flex;
+  width: 498px;
+  height: 60px;
+  margin-top: 10px;
+  padding:0 10px;
+  border: 1px solid black;
+  line-height: 60px;
+  font-size: 28px;
+}
+.md_content ul span{
+  font-family: iconfont;
+}
+.md_content ul li input{
+  padding: 0;
+  margin-left: 10px;
+  width: 420px;
+  height: 60px;
+  border: 0;
+  font-size: 18px;
+}
+.md_btn1{
+  width: 100%;
+  height: 60px;
+  margin-top: 20px;
+  border: 0;
+  background-color: dodgerblue;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+.md_btn:hover{
+  background-color: rgba(30,144,255,.8);
+}

@@ -1,0 +1,43 @@
+.main_listTitle .od_long{
+  width: 590px;
+}
+.item ul .od_li_long{
+  display: flex;
+  width: 570px;
+}
+.od_result{
+  width: 1260px;
+  height: 190px;
+  margin-top: 20px;
+}
+.od_result_right{
+  width: 200px;
+  height: auto;
+  float: right;
+}
+.od_result li{
+  width: 180px;
+  margin-top: 10px;
+  float: right;
+  color: #C8C6CD;
+}
+.od_result .od_btn{
+  display: flex;
+  justify-content: space-between;
+  width: 1260px;
+}
+.od_li_price{
+  float: right;
+  width: 80px;
+  text-align: left;
+  color: black;
+}
+.od_li_price_active{
+  color: #d1434a;
+}
+.od_result .od_next{
+  margin-top: 20px;
+}
+.suc_p{
+  margin-left: 20px;
+}
